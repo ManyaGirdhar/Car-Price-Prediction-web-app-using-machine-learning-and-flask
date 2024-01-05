@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction Result</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+     <!-- Alert Message -->
+     <div class="alert alert-success alert-dismissible fade show text-center mb-0" role="alert">
+        <strong>Hope you are satisfied with the result!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-warning" href="/">Car Price Prediction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/analysis">Analysis</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-5">
+        <div class="card mx-auto" style="max-width: 600px;">
+            <div class= "alert alert-success alert-dismissible fade show text-center mb-0">
+                <h1>Car Price Prediction Result</h1>
+            </div>
+            <div class="card" style="width: 555px; border: 2px solid #ccc; border-radius: 8px; margin: 20px;">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #333; font-size: 18px; margin-bottom: 10px;">Input Data</h5>
+                    <p class="card-text" style="color: #666; font-size: 14px;">{{ input_data | safe }}</p>
+                    <h5 class="card-title" style="color: #333; font-size: 18px; margin-top: 20px;">Predicted Price</h5>
+                    <p class="card-text" style="color: #008000; font-size: 20px; font-weight: bold;">$ {{ price }}</p>
+                </div>
+            </div>
+            
+            <div class="alert alert-success alert-dismissible fade show text-center mb-0">
+                <a href="/" class="btn btn-secondary">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-U5R2sizPRDoUcy6pZz5nl5wfaM4B2bdMlL+qQxSKTnA9vtTqqqLV4CHg5a8AP5Pd"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
