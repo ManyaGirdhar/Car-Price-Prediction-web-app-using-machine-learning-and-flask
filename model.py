@@ -188,6 +188,15 @@ r2 = r2_score(y_test, y_pred)
 
 print("rmse : " , rmse , "r2 score : " , r2)
 
+import pickle
+# Specify the file path where you want to save the pickle file
+pickle_file_path = 'model.pkl'
+
+# Open the file in binary write mode and save the data
+with open(pickle_file_path, 'wb') as file:
+    pickle.dump(model, file)
+
+
 # fitting the size of the plot
 import matplotlib.pyplot as plt
 
